@@ -6,6 +6,7 @@ body {
 		Arial,
 		Helvetica,
 		sans-serif;
+	background: #fffcf2;
 
 	nav {
 		font-family: Geist Mono;
@@ -14,6 +15,37 @@ body {
 		font-size: 12px;
 		line-height: 140%;
 		letter-spacing: 0%;
-		@apply text-[#656565];
+		color: #656565;
+		/* @apply text-[#656565]; */
+	}
+}
+
+/* ---Pricing Section sliding word component --- */
+
+.words-ctn {
+	animation: slide-words 7s forwards;
+}
+
+@keyframes slide-words {
+	0% {
+		transform: translateY(10%);
+		/* opacity: 0.7; */
+	}
+
+	40% {
+		transform: translateY(-30%);
+		/* opacity: 0.7; */
+	}
+	50% {
+		transform: translateY(-50%);
+		/* opacity: 0.7; */
+	}
+	90% {
+		transform: translateY(-70%);
+		/* opacity: 0.7; */
+	}
+	100% {
+		transform: translateY(-85%);
+		/* opacity: 0.7; */
 	}
 }

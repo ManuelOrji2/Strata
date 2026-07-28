@@ -1,32 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Logo from "@/app/_components/Logo/Logo";
 import Image from "next/image";
 import Link from "next/link";
 import dropdownIcon from "@/public/dropdownicon.png";
 
 const Navigation = () => {
-	const [scrolled, setScrolled] = useState(false);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			setScrolled(window.scrollY >= 10);
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
-
 	return (
-		<div className="fixed z-10 flex items-center justify-center border-b border-[#D0D0D0]  w-screen">
-			<nav
-				className={
-					scrolled
-						? `container m-auto flex items-center justify-between w-full h-24.25  px-44 backdrop-blur-xl`
-						: `container m-auto flex items-center justify-between w-full h-24.25  px-44`
-				}
-			>
+		<div className="fixed z-10 flex items-center justify-center border-b bg-[#FFFCF2] border-[#D0D0D0] w-full">
+			<nav className="container m-auto flex items-center justify-between h-24.25  border-x border-[#D0D0D0] px-8">
 				<Link className="cursor-pointer" href="/">
 					<Logo />
 				</Link>
@@ -60,3 +42,14 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+// const [scrolled, setScrolled] = useState(false);
+
+// 	useEffect(() => {
+// 		const handleScroll = () => {
+// 			setScrolled(window.scrollY >= 10);
+// 		};
+
+// 		window.addEventListener("scroll", handleScroll);
+// 		return () => window.removeEventListener("scroll", handleScroll);
+// 	}, []);
